@@ -42,7 +42,7 @@ resource "aws_eks_node_group" "eks-1" {
   cluster_name    = aws_eks_cluster.demo.name
   node_group_name = "eks-1"
   node_role_arn   = aws_iam_role.eks-node.arn
-  subnet_ids      = aws_subnet.eks[*].id
+  subnet_ids      = aws_subnet.eks-sub[*].id
   instance_types  = ["t3.small"]
 
   scaling_config {
