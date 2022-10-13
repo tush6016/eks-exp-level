@@ -61,7 +61,7 @@ resource "aws_security_group_rule" "eks-cluster-ingress-workstation-https" {
   type              = "ingress"
 }
 
-resource "aws_eks_cluster" "demo" {
+resource "aws_eks_cluster" "eks-cluster" {
   name     = var.cluster-name
   role_arn = aws_iam_role.eks-cluster.arn
 
